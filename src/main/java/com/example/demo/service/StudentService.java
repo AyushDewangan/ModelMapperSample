@@ -5,7 +5,6 @@ import java.util.List;
 import com.example.demo.ApiResponse.ResponseMV;
 import com.example.demo.MV.StudentMV;
 import com.example.demo.VM.StudentVM;
-import com.example.demo.model.Student;
 
 public interface StudentService {
 

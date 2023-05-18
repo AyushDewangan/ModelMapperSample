@@ -34,13 +34,13 @@ public class StudentRest {
 	@GetMapping("/getAllStudents")
 	public ResponseEntity<List<StudentMV>> getAllStudent(){
 		log.info("enter in getAllStudent rest api");
-		return new ResponseEntity<>(studentService.getStudents(),HttpStatus.OK);
+		return ResponseEntity.ok().body(studentService.getStudents());
 	}
 	
 	@GetMapping("/getStudentById/{studentId}")
 	public ResponseEntity<StudentMV> getStudentById(@PathVariable int studentId){
 		log.info("enter in getById rest");
-		return new ResponseEntity<>(studentService.getStudent(studentId), HttpStatus.OK);
+		return ResponseEntity.ok().body(studentService.getStudent(studentId));
 	}
 	
 	@GetMapping("/getByName/{studentName}")
